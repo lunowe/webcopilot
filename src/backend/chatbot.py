@@ -8,7 +8,13 @@ from langchain_core.prompts import PromptTemplate
 from langchain.chains import MapReduceDocumentsChain, ReduceDocumentsChain
 from langchain_text_splitters import CharacterTextSplitter
 
+import os
 
+api_key = os.getenv("OPENAI_API_KEY")
+if api_key is None:
+    raise ValueError("OPENAI_API_KEY environment variable is not set")
+
+os.environ["OPENAI_API_KEY"] = api_key
 
 
 class Chatbot:
