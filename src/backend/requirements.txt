@@ -1,0 +1,8 @@
+Flask
+flask-cors
+flask-socketio
+langchain_community
+langchain_openai
+langchain
+langchain_core
+langchain_text_splitters
