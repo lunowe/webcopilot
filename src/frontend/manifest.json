@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "My Extension",	
+    "version": "1.0.0",
+    "description": "This extension is a starting point to create a real extension.",
+    "icons" : {
+        "16": "icon128.png",
+        "48": "icon128.png",
+        "128": "icon128.png"
+    },
+    "background": {
+        "service_worker": "service_worker.js",
+        "type": "module"
+    },
+    "action": {
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "scripting"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ]
+}
