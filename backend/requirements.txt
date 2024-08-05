@@ -1,8 +1,5 @@
 Flask
-flask-cors
-flask-socketio
-langchain_community
-langchain_openai
+flask_cors
+flask_socketio
 langchain
-langchain_core
-langchain_text_splitters
+gunicorn

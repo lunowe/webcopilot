@@ -5,8 +5,8 @@ from chatbot import Chatbot
 import re
 
 app = Flask(__name__)
-CORS(app)
-socketio = SocketIO(app, cors_allowed_origins="*")
+# CORS(app)
+# socketio = SocketIO(app, cors_allowed_origins="*")
 
 chatbot = Chatbot()
 
@@ -27,7 +27,7 @@ def format_message(message):
 
 @app.route("/")
 def index():
-    return "Hello, World!"
+    return render_template("index.html")
 
 @app.route("/test")
 def test():
@@ -56,4 +56,5 @@ def summarize():
     return jsonify({"message": formatted_message})
 
 if __name__ == "__main__":
-    socketio.run(app, debug=True, port=8080)
+    # socketio.run(app, debug=True, port=8080)
+    app.run(debug=True, host='0.0.0.0', port=8080)
